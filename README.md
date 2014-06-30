@@ -1,5 +1,5 @@
 # adler32-umd
-[![Build Status](https://secure.travis-ci.org/hajimes/adler32-umd?branch=master)](http://travis-ci.org/hajimes/adler32-umd)
+[![Build Status](https://travis-ci.org/hajimes/adler32-umd.svg?branch=master)](http://travis-ci.org/hajimes/adler32-umd)
 
 `adler32-umd` is a pure-JavaScript UMD implementation of
 [the Adler-32 checksum algorithm](https://en.wikipedia.org/wiki/Adler-32).
