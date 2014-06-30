@@ -62,6 +62,8 @@
    * ```
    *
    * The first argument `buffer` can be any Array-like object
+   * (e.g., built-in arrays, typed arrays in modern browers,
+   * and `Buffer` in Node.js)
    * each of which element is an integer in the range of [0, 255].
    * If an element violates the range condition,
    * the behavior of this function is unspecified.
