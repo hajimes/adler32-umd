@@ -29,7 +29,7 @@ module.exports = function(grunt) {
             ' cover ./node_modules/mocha/bin/_mocha --' +
             ' -R spec test/**/*.js'
       },
-      jsdox: {
+     jsdox: {
         command: 'jsdox --output doc main.js'
       }
     },
@@ -55,5 +55,8 @@ module.exports = function(grunt) {
   // Default tasks
   grunt.registerTask('minify', ['test', 'uglify:main']);
   grunt.registerTask('test', ['jshint', 'shell:istanbul']);
+  // Generate README.md
   grunt.registerTask('readme', ['shell:jsdox', 'concat:readme']);
+  // Run this task before push
+  grunt.registerTask('prepublish', ['minify', 'readme']);
 };
