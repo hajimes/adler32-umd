@@ -62,7 +62,7 @@
    * ```
    *
    * The first argument `buffer` can be any Array-like object
-   * each of which element is an integer in the range [0, 255].
+   * each of which element is an integer in the range of [0, 255].
    * If an element violates the range condition,
    * the behavior of this function is unspecified.
    * If `buffer` is `undefined`,

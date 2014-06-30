@@ -1,8 +1,10 @@
 # adler32-umd
+[![Build Status](https://secure.travis-ci.org/hajimes/adler32-umd?branch=master)](http://travis-ci.org/hajimes/adler32-umd)
+
 `adler32-umd` is a pure-JavaScript UMD implementation of
 [the Adler-32 checksum algorithm](https://en.wikipedia.org/wiki/Adler-32).
 This library utilizes the [UMD](https://github.com/umdjs/umd) pattern
-so that it works in Node, AMD and browser globals.
+so that it works in Node.js, AMD, and browser globals.
 
 ## Getting Started
 For Node.js,
@@ -37,7 +39,7 @@ console.log(checksum);
 ```
 
 The first argument `buffer` can be any Array-like object
-each of which element is an integer in the range [0, 255].
+each of which element is an integer in the range of [0, 255].
 If an element violates the range condition,
 the behavior of this function is unspecified.
 If `buffer` is `undefined`,
