@@ -1,0 +1,25 @@
+{
+  "name": "adler32-umd",
+  "description":
+    "A pure-JavaScript Adler-32 checksum implementation with UMD support.",
+  "version": "0.1.0-alpha",
+  "main": "main.js",
+  "license": "MIT",
+  "ignore": [
+    ".*",
+    "coverage",
+    "doc"
+  ],
+  "keywords": [
+    "adler", "adler-32", "adler32", "checksum", "hash"
+  ],
+  "authors": [
+    "Hajime Senuma <hajime.senuma@gmail.com>"
+  ],
+  "homepage": "https://github.com/hajimes/adler32-umd",
+  "repository": {
+    "type" : "git",
+    "url" : "git://github.com/hajimes/adler32-umd.git"
+  },
+  "private": true
+}

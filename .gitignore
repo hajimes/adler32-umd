@@ -1,0 +1,17 @@
+# test and build intermediaries
+build/
+tmp/
+_SpecRunner.html
+
+# docs and test reports
+doc/
+coverage/
+
+# Javascript frameworks-related
+node_modules/
+npm-debug.log
+.grunt/
+bower_components/
+
+# Mac OS X-specific
+.DS_Store

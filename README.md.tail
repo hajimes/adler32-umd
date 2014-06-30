@@ -1,0 +1,14 @@
+## Other Pure-JavaScript Adler-32 Implementations
+- https://github.com/BlueJeansAndRain/adler32 -
+  with support for rolling checksums
+- https://github.com/SheetJS/js-adler32 -
+  with support for standard and binary string inputs
+
+## See Also
+- [RFC 1950: ZLIB Compressed Data Format Specification version 3.3]
+  (http://tools.ietf.org/html/rfc1950)
+- [zlib](http://www.zlib.net/)
+
+## License
+Copyright (c) 2014 Hajime Senuma <hajime.senuma@gmail.com>
+under the MIT License.
