@@ -2,8 +2,8 @@
 [![Build Status](https://travis-ci.org/hajimes/adler32-umd.svg?branch=master)]
 (http://travis-ci.org/hajimes/adler32-umd)
 [![Coverage Status]
-(https://coveralls.io/repos/hajimes/adler32-umd/badge.svg?branch=master)]
-(https://coveralls.io/r/hajimes/adler32-umd?branch=master)
+(http://img.shields.io/coveralls/hajimes/adler32-umd.svg)]
+(http://coveralls.io/r/hajimes/adler32-umd)
 [![devDependency Status]
 (https://david-dm.org/hajimes/adler32-umd/dev-status.svg)]
 (https://david-dm.org/hajimes/adler32-umd#info=devDependencies)
