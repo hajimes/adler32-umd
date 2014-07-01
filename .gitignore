@@ -5,6 +5,7 @@ _SpecRunner.html
 
 # docs and test reports
 doc/
+dox/
 coverage/
 
 # Javascript frameworks-related

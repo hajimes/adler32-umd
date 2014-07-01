@@ -26,7 +26,6 @@ bower install git://github.com/hajimes/adler32-umd.git
 ```
 
 ## API
-
 adler32(\[buffer\], \[checksum=1\])
 -----------------------------------
 Returns the Adler-32 checksum value.

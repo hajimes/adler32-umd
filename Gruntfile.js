@@ -5,18 +5,7 @@ module.exports = function(grunt) {
   // Project configuration.
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
-    clean: ['doc', 'coverage', 'README.md', 'adler32-umd.min.js'],
-    concat: {
-      readme: {
-        src: ['./README.md.head', './doc/main.md', './README.md.tail'],
-        dest: 'README.md',
-      },
-      options: {
-        process: function(src) {
-          return src.replace(/^(checksum = adler32)/mg, '  $1');
-        }
-      }
-    },
+    clean: ['doc', 'dox', 'coverage', 'adler32-umd.min.js'],
     jshint: {
       options: {
         jshintrc: '.jshintrc'
@@ -30,7 +19,7 @@ module.exports = function(grunt) {
             ' -R spec test/**/*.js'
       },
      jsdox: {
-        command: 'jsdox --output doc main.js'
+        command: 'jsdox --output dox main.js'
       }
     },
     uglify: {
@@ -42,7 +31,7 @@ module.exports = function(grunt) {
           'adler32-umd.min.js': ['main.js']
         }
       }
-    }
+    },
   });
 
   // Load plugins
@@ -56,7 +45,16 @@ module.exports = function(grunt) {
   grunt.registerTask('minify', ['test', 'uglify:main']);
   grunt.registerTask('test', ['jshint', 'shell:istanbul']);
   // Generate README.md
-  grunt.registerTask('readme', ['shell:jsdox', 'concat:readme']);
+  grunt.registerTask('readme', ['shell:jsdox', '_readme-sub']);
+  grunt.registerTask('_readme-sub', function() {
+    var fs = require('fs');
+    var apiText = fs.readFileSync('./dox/main.md', {encoding: 'utf8'});
+    var readmeText = fs.readFileSync('./README.md', {encoding: 'utf8'});
+    readmeText = readmeText.replace(/(## API)[\s\S]*?(## )/g,
+        '$1\n' + apiText + '\n$2');
+    readmeText = readmeText.replace(/^(checksum = adler32)/mg, '  $1');
+    fs.writeFileSync('./README.md', readmeText);
+  });
   // Run this task before push
   grunt.registerTask('prepublish', ['minify', 'readme']);
 };
