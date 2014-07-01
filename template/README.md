@@ -26,51 +26,7 @@ bower install git://github.com/hajimes/adler32-umd.git
 ```
 
 ## API
-adler32(\[buffer\], \[checksum=1\])
------------------------------------
-Returns the Adler-32 checksum value.
-
-Usage:
-```javascript
-var buffer = [0, 1, 2, 3, 4];
-
-// simple
-console.log(adler32(buffer));
-
-// progressively
-var checksum = adler32();
-for (var i = 0; i < buffer.length; i++) {
-  checksum = adler32(buffer.slice(i, i + 1), checksum);
-}
-console.log(checksum);
-```
-
-The first argument `buffer` can be any Array-like object
-(e.g., built-in arrays, typed arrays in modern browers,
-and `Buffer` in Node.js)
-each of which element is an integer in the range of [0, 255].
-If an element violates the range condition,
-the behavior of this function is unspecified.
-If `buffer` is `undefined`,
-the result value is the same as one when an empty buffer is given.
-
-The second argument is an optional checksum value to be updated,
-which is useful for calculating the checksum of a byte stream
-progressively.
-
-
-
-**Parameters**
-
-**[buffer]**:  *byte[]|Uint8Array|Buffer*,  - byte buffer
-
-**[checksum=1]**:  *number*,  - previously calculated checksum
-
-**Returns**
-
-*number*,  Adler-32 checksum value
-
-
+@@include('../dox/main.md')
 
 ## Other Pure-JavaScript Adler-32 Implementations
 - https://github.com/BlueJeansAndRain/adler32 -
