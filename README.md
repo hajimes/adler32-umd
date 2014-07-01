@@ -14,7 +14,8 @@ This library utilizes the [UMD pattern](https://github.com/umdjs/umd)
 so that it works in [Node.js](http://nodejs.org/),
 [AMD](http://requirejs.org/docs/whyamd.html), and browser globals.
 
-## Getting Started
+## Installation
+### Downloading
 For Node.js,
 ```bash
 npm install git://github.com/hajimes/adler32-umd.git
@@ -23,6 +24,31 @@ npm install git://github.com/hajimes/adler32-umd.git
 For client-side,
 ```bash
 bower install git://github.com/hajimes/adler32-umd.git
+```
+
+### Loading
+For Node.js,
+```javascript
+var adler32 = require('adler32-umd');
+```
+
+For AMD,
+```javascript
+require.config({
+  paths: {
+    adler32: 'path/to/adler32-umd'
+  }
+});
+
+require(['adler32'], function(adler32) {
+  /* ... */
+});
+```
+
+In a brower,
+```html
+<!-- The following snippet publishes a global function adler32 -->
+<script src="path/to/adler32-umd/adler32-umd.min.js"></script>
 ```
 
 ## API
